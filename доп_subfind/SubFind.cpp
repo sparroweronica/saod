@@ -26,7 +26,7 @@ size_t kmp(const std::string& str, const std::string& sub)
 	int n = str.length();
 	int m = sub.length();
 
-	std::vector<int> pi(m, 0);
+	std::vector<int> pi(m, -1);
 	for (int i = 1, j = 0; i < m; i++) {
 		while (j > 0 && sub[i] != sub[j])
 			j = pi[j - 1];
